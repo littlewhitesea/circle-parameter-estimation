@@ -1,0 +1,10 @@
+function [x0,y0,r] = circle_es(x1,y1,x2,y2,x3,y3)
+a = x1 - x2;
+b = y1 - y2;
+c = x1 - x3;
+d = y1 - y3;
+e = ((x1^2 - x2^2) - (y2^2 - y1^2))/2;
+f = ((x1^2 - x3^2) - (y3^2 - y1^2))/2;
+x0 = -(d*e - b*f)/(b*c - a*d);
+y0 = -(a*f - c*e)/(b*c - a*d);
+r = sqrt((x1 - x0)^2 + (y1 - y0)^2);
